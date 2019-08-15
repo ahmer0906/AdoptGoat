@@ -8,12 +8,18 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Reporter;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 public class BrowserFactory {
 	protected WebDriver driver;
 
+	/*
+	 * 
+	 */
 	@BeforeTest
+	@Parameters({"browser"})
 	public void startBrowser(String browser) {
 		switch (browser.toUpperCase()) {
 		case "CHROME":
@@ -54,14 +60,19 @@ public class BrowserFactory {
 			System.exit(0);
 		}
 		browserSetting(driver);
-		//return driver;
 	}
 
-	public void closeBrowser(WebDriver driver) {
+	/*
+	 * 
+	 */
+	@AfterTest
+	public void closeBrowser() {
 		driver.quit();
 	}
-	
 
+	/*
+	 * 
+	 */
 	private void browserSetting(WebDriver driver) {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);

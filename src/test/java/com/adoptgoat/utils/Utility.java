@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.adoptgoat.library.ActionActivities;
-	
+
 public class Utility {
 
 	@SuppressWarnings("deprecation")
@@ -57,13 +57,12 @@ public class Utility {
 		ActionActivities.mouseHoverAndClick(driver, locator1, locator2);
 	}
 
-	// AC - Using Submit to click the object
 	public static void clickActionSubmit(WebDriver driver, By locator) {
 		checkElementClick(driver, locator).submit();
 		wait(1);
 	}
 
-	public static void Waitforobjectvisible(WebDriver driver, By locator) {
+	public static void waitForObjectVisiblity(WebDriver driver, By locator) {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 5000);
 			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy((locator)));
