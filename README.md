@@ -1,16 +1,19 @@
 # AdoptGoat
-##Test Scenarios
+## Test Scenarios
 
-##Way to Execute Test Scenario
+## Way to Execute Test Scenario
 Maven should be installed on Local machine
 Navigate to project root folder via cmd/terminal
-Execute -> mvn clean install test 
+```mvn clean install test
+```
 
-###OR
+### OR
 
 If project in imported into Eclipse then 
-Right click on pom.xml -> Run as 'Maven Install'
+Right click on pom.xml -> Run as 
+```Maven Install
+```
 
-##Execution Report
+## Execution Report
 TestNG report has been taken as Test Execution report 
 Once the execution get done, same can be fetched from 'test-output' folder as 'emailable-report.html' which can be view through Web Browser
