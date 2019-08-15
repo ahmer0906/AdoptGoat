@@ -4,14 +4,17 @@
 ## Way to Execute Test Scenario
 Maven should be installed on Local machine
 Navigate to project root folder via cmd/terminal
-```mvn clean install test
+```sh
+mvn clean install test
 ```
 
 ### OR
 
 If project in imported into Eclipse then 
-Right click on pom.xml -> Run as 
-```Maven Install
+Right click on pom.xml -> Run as Maven -> 
+```sh
+Maven install
+Maven test
 ```
 
 ## Execution Report
